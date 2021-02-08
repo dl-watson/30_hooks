@@ -5,13 +5,11 @@ import Main from "../../containers/Main";
 const App = () => {
   return (
     <>
-      <div className="main">
-        <Router>
-          <Switch>
-            <Route path="/" exact component={Main} />
-          </Switch>
-        </Router>
-      </div>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Main} />
+        </Switch>
+      </Router>
     </>
   );
 };
