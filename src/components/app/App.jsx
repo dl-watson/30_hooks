@@ -1,16 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Main from "../../containers/Main";
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <>
-        <div className="main">
-          <Router>
-            <Switch>{/* <Route path="/" exact component={} /> */}</Switch>
-          </Router>
-        </div>
-      </>
-    );
-  }
-}
+const App = () => {
+  return (
+    <>
+      <div className="main">
+        <Router>
+          <Switch>
+            <Route path="/" exact component={Main} />
+          </Switch>
+        </Router>
+      </div>
+    </>
+  );
+};
+
+export default App;
