@@ -4,18 +4,16 @@ import fetchCharacters from "../services/fetchCharacters";
 
 const Main = () => {
   const [characters, setCharacters] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchCharacters().then((characters) => {
       setCharacters(characters);
+      setLoading(false);
     });
   }, []);
 
-  return (
-    <>
-      <List characters={characters} />
-    </>
-  );
+  return <>{loading ? <>Loading...</> : <List characters={characters} />}</>;
 };
 
 export default Main;

@@ -10,7 +10,7 @@ const List = ({ characters }) => {
       <li key={uuid()} className={styles.listItem}>
         {character.name}
         <Link to={`/details/${character.name}`}>
-          <img src={character?.image} />
+          <img src={character.image} />
         </Link>
       </li>
     );
