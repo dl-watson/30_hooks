@@ -1,9 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import fetchCharacterByName from "../../services/fetchCharacterByName";
+import ItemDetails from "./ItemDetails";
 
 const Details = () => {
   const [character, setCharacter] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  return <div></div>;
+  useEffect(() => {
+    return fetchCharacterByName().then((character) => {
+      setCharacter(character);
+      setLoading(false);
+    });
+  });
+
+  return (
+    <>{loading ? <>Loading...</> : <ItemDetails character={character} />}</>
+  );
 };
 
 Details.propTypes = {};
