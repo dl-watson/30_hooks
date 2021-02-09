@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import _ from "lodash";
+import styles from "./styles/ItemDetails.css";
 
 const ItemDetails = ({ character }) => {
   [character] = character;
   return (
-    <div>
+    <div className={styles.ItemDetails}>
       {character.name}
       <img src={character.image} />
     </div>

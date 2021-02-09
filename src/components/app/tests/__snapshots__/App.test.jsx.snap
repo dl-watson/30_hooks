@@ -2,6 +2,23 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
+  <audio
+    autoplay=""
+    class="react-audio-player "
+    id=""
+    loop=""
+    preload="metadata"
+    src="public/background-music.mp4"
+    title="public/background-music.mp4"
+  >
+    <p>
+      Your browser does not support the 
+      <code>
+        audio
+      </code>
+       element.
+    </p>
+  </audio>
   <div
     data-testid="main-entrypoint"
   >

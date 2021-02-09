@@ -17,7 +17,7 @@ describe("Main component", () => {
     });
   });
 
-  it("tests that the List displays after loading is finished", () => {
+  it("tests that the List element displays after loading is finished", () => {
     render(<Main />);
 
     const mainEntrypoint = screen.getByTestId("main-entrypoint");
