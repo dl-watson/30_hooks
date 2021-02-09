@@ -8,8 +8,8 @@ exports[`App component renders App 1`] = `
     id=""
     loop=""
     preload="metadata"
-    src="public/background-music.mp4"
-    title="public/background-music.mp4"
+    src="public/audio/background-music.mp4"
+    title="public/audio/background-music.mp4"
   >
     <p>
       Your browser does not support the 
