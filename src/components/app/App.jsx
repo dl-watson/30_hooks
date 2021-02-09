@@ -9,7 +9,7 @@ const App = () => {
     <>
       <Router>
         <Audio
-          src="public/background-music.mp4"
+          src="public/audio/background-music.mp4"
           autoPlay
           loop={true}
           volume={0.2}
