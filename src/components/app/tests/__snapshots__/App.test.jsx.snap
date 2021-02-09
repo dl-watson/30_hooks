@@ -2,6 +2,14 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  Loading...
+  <div
+    data-testid="main-entrypoint"
+  >
+    <div
+      data-testid="loading"
+    >
+      Loading...
+    </div>
+  </div>
 </DocumentFragment>
 `;

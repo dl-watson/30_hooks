@@ -13,7 +13,15 @@ const Main = () => {
     });
   }, []);
 
-  return <>{loading ? <>Loading...</> : <List characters={characters} />}</>;
+  return (
+    <div data-testid="main-entrypoint">
+      {loading ? (
+        <div data-testid="loading">Loading...</div>
+      ) : (
+        <List characters={characters} />
+      )}
+    </div>
+  );
 };
 
 export default Main;

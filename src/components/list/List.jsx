@@ -16,7 +16,11 @@ const List = ({ characters }) => {
     );
   });
 
-  return <ul className={styles.List}>{characterList}</ul>;
+  return (
+    <ul data-testid="unordered-list" className={styles.List}>
+      {characterList}
+    </ul>
+  );
 };
 
 List.propTypes = {
