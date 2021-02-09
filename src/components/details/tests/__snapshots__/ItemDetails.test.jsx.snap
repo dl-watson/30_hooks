@@ -6,6 +6,25 @@ exports[`ItemDetails component renders ItemDetails 1`] = `
     class="ItemDetails"
   >
     <img />
+    <div
+      class="details"
+    >
+      <p>
+        Quote: 
+      </p>
+      <p>
+        Personality: 
+      </p>
+      <p>
+        Birthday: 
+      </p>
+      <p>
+        Species: 
+      </p>
+      <p>
+        Phrase: 
+      </p>
+    </div>
   </div>
 </DocumentFragment>
 `;
