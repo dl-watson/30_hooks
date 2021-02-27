@@ -52,6 +52,9 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@apollo/react-hooks": "^4.0.0",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.5.0",
     "lodash": "^4.17.20",
     "node-fetch": "^2.6.1",
     "react": "^17.0.1",

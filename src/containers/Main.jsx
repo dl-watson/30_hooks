@@ -1,16 +1,34 @@
 import React, { useState, useEffect } from "react";
 import List from "../components/list/List";
-import fetchCharacters from "../services/fetchCharacters";
+import client from "../index";
+import { gql } from "apollo-boost";
 
 const Main = () => {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchCharacters().then((characters) => {
-      setCharacters(characters);
-      setLoading(false);
-    });
+    client
+      .query({
+        query: gql`
+          query {
+            allVillagers {
+              _id
+              name
+              image
+              personality
+              species
+              phrase
+              quote
+              birthday
+            }
+          }
+        `,
+      })
+      .then((characters) => {
+        setCharacters(characters.data.allVillagers);
+        setLoading(false);
+      });
   }, []);
 
   return (

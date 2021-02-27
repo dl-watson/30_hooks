@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import fetchCharacterByName from "../../services/fetchCharacterByName";
 import ItemDetails from "./ItemDetails";
+import client from "../../index";
+import { gql } from "apollo-boost";
 
 const Details = () => {
   const [character, setCharacter] = useState([]);
@@ -9,10 +10,27 @@ const Details = () => {
   const { name } = useParams();
 
   useEffect(() => {
-    return fetchCharacterByName(name).then((character) => {
-      setCharacter(character);
-      setLoading(false);
-    });
+    client
+      .query({
+        query: gql`
+          query {
+            villager (name: "${name}") {
+              _id
+              name
+              image
+              personality
+              species
+              phrase
+              quote
+              birthday
+            }
+          }
+        `,
+      })
+      .then((character) => {
+        setCharacter(character.data.villager);
+        setLoading(false);
+      });
   }, []);
 
   return (
