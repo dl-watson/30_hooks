@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import List from "../components/list/List";
-import client from "../index";
+import client from "../providers/graphql";
 import { gql } from "apollo-boost";
 
 const Main = () => {

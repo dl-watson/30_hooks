@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetails from "./ItemDetails";
-import client from "../../index";
+import client from "../../providers/graphql";
 import { gql } from "apollo-boost";
 
 const Details = () => {
