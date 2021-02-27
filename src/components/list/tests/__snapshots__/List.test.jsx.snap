@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List component renders List 1`] = `
+<DocumentFragment>
+  <ul
+    class="List"
+    data-testid="unordered-list"
+  >
+    <li
+      class="listItem"
+    >
+      <a
+        href="/details/undefined"
+      >
+        <img />
+      </a>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

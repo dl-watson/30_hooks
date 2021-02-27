@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders App 1`] = `
+<DocumentFragment>
+  <audio
+    autoplay=""
+    class="react-audio-player "
+    id=""
+    loop=""
+    preload="metadata"
+    src="public/audio/background-music.mp4"
+    title="public/audio/background-music.mp4"
+  >
+    <p>
+      Your browser does not support the 
+      <code>
+        audio
+      </code>
+       element.
+    </p>
+  </audio>
+  <div
+    data-testid="main-entrypoint"
+  >
+    <div
+      data-testid="loading"
+    >
+      Loading...
+    </div>
+  </div>
+</DocumentFragment>
+`;
